@@ -1,12 +1,12 @@
-package com.bcorpse.schedulingtask;
+package com.bcorpse;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SchedulingTaskApplication {
+public class ContractRestApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SchedulingTaskApplication.class, args);
+		SpringApplication.run(ContractRestApplication.class, args);
 	}
 }

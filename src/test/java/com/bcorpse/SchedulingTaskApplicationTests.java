@@ -1,4 +1,4 @@
-package com.bcorpse.schedulingtask;
+package com.bcorpse;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

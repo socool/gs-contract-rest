@@ -4,11 +4,15 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.bcorpse</groupId>
-	<artifactId>scheduling-task</artifactId>
+	<artifactId>gs-contract-rest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <modules>
+        <module>contract-rest-service</module>
+		<module>contract-rest-client</module>
+	</modules>
+    <packaging>pom</packaging>
 
-	<name>scheduling-task</name>
+	<name>gs-contract-rest</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
