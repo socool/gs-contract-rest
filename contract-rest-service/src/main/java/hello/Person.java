@@ -2,6 +2,11 @@ package hello;
 
 class Person {
 
+
+    public Person(){
+
+    }
+
     Person(Long id, String name, String surname) {
         this.id = id;
         this.name = name;

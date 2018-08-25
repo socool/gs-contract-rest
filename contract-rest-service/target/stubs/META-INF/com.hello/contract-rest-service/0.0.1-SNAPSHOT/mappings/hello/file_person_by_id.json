@@ -1,0 +1,16 @@
+{
+  "id" : "41ef68fb-cfb5-46e0-9562-c1aa7352b121",
+  "request" : {
+    "url" : "/person/1",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"surname\":\"bee\",\"name\":\"foo\",\"id\":1}",
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "41ef68fb-cfb5-46e0-9562-c1aa7352b121"
+}
