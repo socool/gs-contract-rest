@@ -1,6 +1,7 @@
 package hello;
 
 import org.assertj.core.api.BDDAssertions;
+import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,11 +9,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.cloud.contract.stubrunner.junit.StubRunnerRule;
 import org.springframework.cloud.contract.stubrunner.spring.StubRunnerProperties;
 import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.RestTemplate;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+@TestPropertySource(properties = "server.port=9192")
 public class ContractRestClientApplicationTest {
 
     @Rule
@@ -20,6 +23,10 @@ public class ContractRestClientApplicationTest {
             .downloadStub("com.hello", "contract-rest-service", "0.0.1-SNAPSHOT", "stubs")
             .withPort(8100)
             .stubsMode(StubRunnerProperties.StubsMode.LOCAL);
+    @Before
+    public void setUp(){
+        System.setProperty("server.port", "8081");
+    }
 
     @Test
     public void get_person_from_service_contract() {
